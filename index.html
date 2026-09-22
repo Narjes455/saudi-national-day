@@ -93,6 +93,10 @@ body{
 footer{text-align:center;padding:50px 20px calc(50px + env(safe-area-inset-bottom));
   color:#6fae8c;font-size:14px;border-top:1px solid rgba(127,232,176,.15);margin-top:30px}
 footer b{color:#bdf5d6}
+footer .me{display:inline-block;margin-top:10px;color:#bdf5d6;font-weight:700;font-size:17px;
+  text-decoration:none;padding:9px 22px;border:1px solid rgba(127,232,176,.35);border-radius:999px;
+  transition:.25s}
+footer .me:hover{background:rgba(127,232,176,.14);border-color:#7fe8b0;color:#fff;transform:translateY(-2px)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;opacity:1!important}}
 </style>
 </head>
@@ -103,21 +107,39 @@ footer b{color:#bdf5d6}
 
 <div class="wrap">
 <section class="hero">
-  <svg class="emblem" viewBox="0 0 100 100" aria-hidden="true">
-    <g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round">
-      <path d="M22 62 Q50 78 78 62"/>
-      <path d="M26 70 Q50 84 74 70"/>
+  <svg class="emblem" viewBox="0 0 200 200" aria-label="شعار المملكة العربية السعودية">
+    <g fill="#fff">
+      <path d="M96.6 100 98.4 74h3.2l1.8 26c0 1.2-1 2-2.2 2h-2c-1.2 0-2.2-.8-2.2-2z"/>
+      <g id="frond-set">
+        <path d="M100 80C93 60 92 40 100 18c8 22 7 42 0 62z"/>
+        <path d="M100 80C93 60 92 40 100 18c8 22 7 42 0 62z" transform="rotate(20 100 80)"/>
+        <path d="M100 80C93 60 92 40 100 18c8 22 7 42 0 62z" transform="rotate(-20 100 80)"/>
+        <path d="M100 80C94 62 93 46 100 28c7 18 6 34 0 52z" transform="rotate(40 100 80)"/>
+        <path d="M100 80C94 62 93 46 100 28c7 18 6 34 0 52z" transform="rotate(-40 100 80)"/>
+        <path d="M100 80C94 64 93 50 100 34c7 16 6 30 0 46z" transform="rotate(60 100 80)"/>
+        <path d="M100 80C94 64 93 50 100 34c7 16 6 30 0 46z" transform="rotate(-60 100 80)"/>
+        <path d="M100 80C95 66 94 54 100 40c6 14 5 26 0 40z" transform="rotate(80 100 80)"/>
+        <path d="M100 80C95 66 94 54 100 40c6 14 5 26 0 40z" transform="rotate(-80 100 80)"/>
+        <path d="M100 80C95 68 94 58 100 48c6 10 5 20 0 32z" transform="rotate(100 100 80)"/>
+        <path d="M100 80C95 68 94 58 100 48c6 10 5 20 0 32z" transform="rotate(-100 100 80)"/>
+      </g>
+    </g>
+    <g stroke="#fff" fill="none" stroke-linecap="round">
+      <path d="M44 120C64 158 136 162 158 124" stroke-width="9"/>
+      <path d="M42 132C62 170 138 174 156 136" stroke-width="9"/>
+      <path d="M44 120 33 108M156 136l11-12" stroke-width="7"/>
+      <path d="M37.5 101.5 28.5 114.5M162.5 117.5l9-13" stroke-width="5"/>
     </g>
     <g fill="#fff">
-      <path d="M50 8 q3 10 2 18 q4-6 9-8 q-4 8-6 14 q6-4 11-3 q-7 5-11 11 q7-2 12 2 q-8 2-13 8 h-8 z"/>
-      <path d="M50 8 q-3 10-2 18 q-4-6-9-8 q4 8 6 14 q-6-4-11-3 q7 5 11 11 q-7-2-12 2 q8 2 13 8 h8 z"/>
+      <circle cx="30" cy="104" r="4"/>
+      <circle cx="170" cy="120" r="4"/>
     </g>
   </svg>
 
   <div class="kicker">المملكة العربية السعودية</div>
   <h1 class="title">اليوم الوطني السعودي</h1>
   <div class="num" id="counter">0</div>
-  <div class="date">٢٣ سبتمبر ٢٠٢٦ · ١ ربيع الأول ١٤٤٨</div>
+  <div class="date">٢٣ سبتمبر ٢٠٢٦ · ١٢ ربيع الثاني ١٤٤٨</div>
   <div class="slogan"><span id="typed"></span><i class="cursor"></i></div>
 
   <div class="flagbox">
@@ -164,7 +186,8 @@ footer b{color:#bdf5d6}
 </section>
 
 <footer>
-  كل عام والوطن بخير 🇸🇦<br><b>نرجس العمري</b>
+  كل عام والوطن بخير 🇸🇦<br>
+  <a class="me" href="https://github.com/Narjes455" target="_blank" rel="noopener">نرجس العمري</a>
 </footer>
 </div>
 
@@ -237,8 +260,6 @@ function tick(){
   document.getElementById('m').textContent=ar(m);
   document.getElementById('s').textContent=ar(s);
 }
-
-  
 tick();setInterval(tick,1000);
 </script>
 </body>
