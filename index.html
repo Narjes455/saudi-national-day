@@ -63,7 +63,7 @@ body{
   transform:translateX(-120%);animation:shine 4s 3s infinite}
 @keyframes shine{0%{transform:translateX(-120%)}45%,100%{transform:translateX(120%)}}
 
-.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+.scroll{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);text-align:center;
   color:#7fe8b0;font-size:13px;letter-spacing:3px;opacity:0;animation:fade 1s 3.2s forwards}
 .scroll span{display:block;font-size:20px;animation:bob 1.6s infinite}
 @keyframes bob{50%{transform:translateY(8px)}}
@@ -94,10 +94,11 @@ body{
 footer{text-align:center;padding:50px 20px calc(50px + env(safe-area-inset-bottom));
   color:#6fae8c;font-size:14px;border-top:1px solid rgba(127,232,176,.15);margin-top:30px}
 footer b{color:#bdf5d6}
-footer .me{display:inline-block;margin-top:10px;color:#bdf5d6;font-weight:700;font-size:17px;
-  text-decoration:none;padding:9px 22px;border:1px solid rgba(127,232,176,.35);border-radius:999px;
-  transition:.25s}
-footer .me:hover{background:rgba(127,232,176,.14);border-color:#7fe8b0;color:#fff;transform:translateY(-2px)}
+.me{display:inline-block;margin-top:12px;color:#bdf5d6;font-weight:700;font-size:15px;
+  letter-spacing:0;text-decoration:none;padding:8px 20px;
+  border:1px solid rgba(127,232,176,.35);border-radius:999px;
+  background:rgba(3,21,12,.35);transition:.25s}
+.me:hover{background:rgba(127,232,176,.16);border-color:#7fe8b0;color:#fff;transform:translateY(-2px)}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;opacity:1!important}}
 </style>
 </head>
@@ -132,7 +133,9 @@ footer .me:hover{background:rgba(127,232,176,.14);border-color:#7fe8b0;color:#ff
     </div>
   </div>
 
-  <div class="scroll">اكتشف<span>↓</span></div>
+  <div class="scroll">اكتشف<span>↓</span>
+    <a class="me" href="https://github.com/Narjes455" target="_blank" rel="noopener">نرجس العمري</a>
+  </div>
 </section>
 
 <section class="section">
@@ -160,8 +163,7 @@ footer .me:hover{background:rgba(127,232,176,.14);border-color:#7fe8b0;color:#ff
 </section>
 
 <footer>
-  كل عام والوطن بخير 🇸🇦<br>
-  <a class="me" href="https://github.com/Narjes455" target="_blank" rel="noopener">نرجس العمري</a>
+  كل عام والوطن بخير 🇸🇦
 </footer>
 </div>
 
